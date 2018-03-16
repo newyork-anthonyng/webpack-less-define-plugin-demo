@@ -34,5 +34,13 @@ module.exports = {
         ]
       }
     ]
-  }
+  },
+
+  plugins: [
+    // use DefinePlugin to create global constants in your JavaScript files
+    // https://webpack.js.org/plugins/define-plugin/
+    new webpack.DefinePlugin({
+      "process.env.COLOR": JSON.stringify(process.env.COLOR)
+    })
+  ]
 };

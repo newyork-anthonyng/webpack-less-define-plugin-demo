@@ -80,3 +80,21 @@ body {
   background-color: $COLOR;
 }
 ```
+
+# How to reference environment variables in .js files?
+
+We can use the [`webpack.DefinePlugin`](https://webpack.js.org/plugins/define-plugin/) plugin.
+
+```js
+plugins: [
+  new webpack.DefinePlugin({
+    "process.env.COLOR": JSON.stringify(process.env.COLOR)
+  })
+];
+```
+
+And we make reference to the `COLOR` variable like so:
+
+```js
+console.log(process.env.COLOR);
+```

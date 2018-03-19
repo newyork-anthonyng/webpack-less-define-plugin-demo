@@ -77,7 +77,7 @@ And we make reference to the `COLOR` variable like so:
 // styles.less
 
 body {
-  background-color: $COLOR;
+  background-color: @COLOR;
 }
 ```
 
